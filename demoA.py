@@ -1,12 +1,11 @@
 # Import commands
 import time
-import time_helper as th
 
 # Motivating Data Structures
 
 ## Task 1: Create a list of 50,000 numbers
 
-nums = 50000
+nums = 5000000
 num_list = []
 
 ### Option 1: For Loop
@@ -18,9 +17,11 @@ for i in range(nums):
 end = time.process_time()
 
 # Report execution time
-th.execution_time(start,end, "for loop: create a list of 50K numbers")
+print(f"for loop to create a list of {nums} numbers: {end - start} s")
 
 ### Option 2: List Comprehension
 start = time.process_time()
 num_list = [i for i in range(50000)]
 end = time.process_time()
+
+print(f"list comprehension to create a list of {nums} numbers: {end - start} s")
